@@ -139,6 +139,7 @@ table {
 
 
 /* Set every element's box-sizing to border-box */
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -147,9 +148,17 @@ table {
 	border: 1px solid grey;
 }
 
+//Google font import
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
 //    VARIABLES
+@paraH2: 'Noto Serif', serif;
+
 @main-color: blue;
 @bgColor: beige;
+
+//media
+@mobile: ~"(max-width: 500px)";
 
 //    MIXINS
 .navAlign() {
@@ -182,6 +191,7 @@ h3 {
 }
 
 /****section loyout*************************************************************/
+
 section {
 	padding: 4% 0;
 }
@@ -191,6 +201,13 @@ section {
 header {
 	nav {
 		.navAlign();
+
+		@media @mobile {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 3%;
+		}
+
 
 		a {
 			font-size: 20px;
@@ -202,6 +219,7 @@ header {
 }
 
 /***top-section********************************************************/
+
 .topSection {
 
 	.sectionProps();
@@ -210,6 +228,10 @@ header {
 		width: 60%;
 		height: 80%;
 		margin-left: 4%;
+
+		@media @mobile {
+			margin-left: 20%;
+		}
 
 
 		.titles {
@@ -221,17 +243,30 @@ header {
 	h1 {
 		font-size: 5rem;
 		margin: 2% 0% 1% 2%;
+
+		@media @mobile {
+			text-align: center;
+		}
 	}
 
 	h2 {
 		font-size: 3rem;
 		margin-left: 30%;
 
+		@media @mobile {
+			text-align: center;
+			margin: 0;
+		}
 	}
 
 	h3 {
 		font-size: 1.7rem;
-		margin-left: 10%
+
+		margin-left: 10%;
+
+		@media @mobile {
+			display: none;
+		}
 	}
 
 	h4 {
@@ -241,4 +276,91 @@ header {
 		color: @main-color;
 	}
 
+}
+
+/****middle- section********************************************************/
+
+.midSection {
+	display: flex;
+
+	@media @mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-left: 6%;
+		margin-bottom: 1.5%;
+		margin-top: 2%;
+		font-family: @paraH2;
+	}
+
+	.para {
+		border: 1px solid black;
+		width: 75%;
+		height: 30%;
+		margin: 1%;
+	}
+
+	p {
+		font-size: 1.3rem;
+		margin-left: 1%;
+		padding: 3%;
+	}
+}
+
+/*****bottom-section*******************************************************/
+
+.bottomSection {
+	display: flex;
+	flex-direction: column;
+
+	@media @mobile {
+		display: flex;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-left: 15%;
+		margin-bottom: 2%;
+
+
+	}
+
+	.myTable {
+		width: 70%;
+		margin-left: 15%;
+
+		th {
+			border: 1px solid black;
+			padding: 1.5%;
+			font-size: 1.2rem;
+
+			@media @mobile {
+				font-size: 1.1rem;
+				font-weight: bold;
+			}
+		}
+
+		td {
+			font-size: 1.2rem;
+			margin-left: 25%;
+			border: 1px solid black;
+			padding: 1%;
+		}
+
+	}
+}
+
+/*****footer**************************************************************/
+
+footer {
+	font-size: 1rem;
+	text-align: center;
+
+	h6 {
+		margin-bottom: 0.5%;
+	}
 }
