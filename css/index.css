@@ -1,1 +1,324 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  border: 1px solid grey;
+}
+.container {
+  /****section loyout*************************************************************/
+  /****navigation********************************************************/
+  /***top-section********************************************************/
+  /****middle- section********************************************************/
+  /*****bottom-section*******************************************************/
+  /*******contact***********************************************************/
+  /*****footer**************************************************************/
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Serif'), local('NotoSerif'), url(https://fonts.gstatic.com/s/notoserif/v8/ga6Iaw1J5X9T9RW6j9bNfFcWbQ.ttf) format('truetype');
+}
+.container body {
+  font-family: 'Montserrat', sans-serif;
+}
+.container h1,
+.container h2,
+.container h3 {
+  font-family: 'Inconsolata', monospace;
+}
+.container section {
+  padding: 4% 0;
+}
+.container header nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+  }
+}
+.container header nav a {
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 2%;
+}
+.container .topSection {
+  height: 40%vh;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5%;
+  border: 1px solid grey;
+  background-color: beige;
+}
+.container .topSection .resume-img {
+  width: 60%;
+  height: 80%;
+  margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .container .topSection .resume-img {
+    margin-left: 20%;
+  }
+}
+.container .topSection .resume-img .titles {
+  margin-left: 5%;
+}
+.container .topSection h1 {
+  font-size: 5rem;
+  margin: 2% 0% 1% 2%;
+}
+@media (max-width: 500px) {
+  .container .topSection h1 {
+    text-align: center;
+  }
+}
+.container .topSection h2 {
+  font-size: 3rem;
+  margin-left: 30%;
+}
+@media (max-width: 500px) {
+  .container .topSection h2 {
+    text-align: center;
+    margin: 0;
+  }
+}
+.container .topSection h3 {
+  font-size: 1.7rem;
+  margin-left: 10%;
+}
+@media (max-width: 500px) {
+  .container .topSection h3 {
+    display: none;
+  }
+}
+.container .topSection h4 {
+  font-size: 1.6rem;
+  margin-left: 28%;
+  margin-top: 3%;
+  color: blue;
+}
+.container .midSection {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .container .midSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .midSection h2 {
+  font-size: 1.5rem;
+  margin-left: 6%;
+  margin-bottom: 1.5%;
+  margin-top: 2%;
+  font-family: 'Noto Serif', serif;
+}
+.container .midSection .para {
+  border: 1px solid black;
+  width: 75%;
+  height: 30%;
+  margin: 1%;
+}
+.container .midSection p {
+  font-size: 1.3rem;
+  margin-left: 1%;
+  padding: 3%;
+}
+.container .bottomSection {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .container .bottomSection {
+    display: flex;
+  }
+}
+.container .bottomSection h1 {
+  font-size: 2rem;
+  margin-left: 15%;
+  margin-bottom: 2%;
+}
+.container .bottomSection .myTable {
+  width: 70%;
+  margin-left: 15%;
+}
+.container .bottomSection .myTable th {
+  border: 1px solid black;
+  padding: 1.5%;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .bottomSection .myTable th {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
+.container .bottomSection .myTable td {
+  font-size: 1.2rem;
+  margin-left: 25%;
+  border: 1px solid black;
+  padding: 1%;
+}
+.container .contact {
+  border: 2px solid black;
+  width: 30%;
+  margin-left: 35%;
+  text-align: left;
+  padding-bottom: 2%;
+  background: aliceblue;
+}
+.container .contact h2 {
+  font-size: 20px;
+  font-family: 'Noto Serif', serif;
+  margin: 2% 0 1% 30%;
+}
+.container .contact p {
+  font-size: 1.2rem;
+  margin-left: 3%;
+}
+.container footer {
+  font-size: 1rem;
+  text-align: center;
+}
+.container footer h6 {
+  margin-bottom: 0.5%;
+}
