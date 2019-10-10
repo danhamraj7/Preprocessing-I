@@ -134,6 +134,15 @@ table {
   max-width: 100%;
   border: 1px solid grey;
 }
+.container {
+  /****section loyout*************************************************************/
+  /****navigation********************************************************/
+  /***top-section********************************************************/
+  /****middle- section********************************************************/
+  /*****bottom-section*******************************************************/
+  /*******contact***********************************************************/
+  /*****footer**************************************************************/
+}
 @font-face {
   font-family: 'Noto Serif';
   font-style: normal;
@@ -141,20 +150,18 @@ table {
   font-display: swap;
   src: local('Noto Serif'), local('NotoSerif'), url(https://fonts.gstatic.com/s/notoserif/v8/ga6Iaw1J5X9T9RW6j9bNfFcWbQ.ttf) format('truetype');
 }
-body {
+.container body {
   font-family: 'Montserrat', sans-serif;
 }
-h1,
-h2,
-h3 {
+.container h1,
+.container h2,
+.container h3 {
   font-family: 'Inconsolata', monospace;
 }
-/****section loyout*************************************************************/
-section {
+.container section {
   padding: 4% 0;
 }
-/****navigation********************************************************/
-header nav {
+.container header nav {
   display: flex;
   justify-content: flex-end;
   margin-right: 6%;
@@ -162,19 +169,18 @@ header nav {
   margin-bottom: 3%;
 }
 @media (max-width: 500px) {
-  header nav {
+  .container header nav {
     display: flex;
     justify-content: space-evenly;
     margin-top: 3%;
   }
 }
-header nav a {
+.container header nav a {
   font-size: 20px;
   text-decoration: none;
   margin-right: 2%;
 }
-/***top-section********************************************************/
-.topSection {
+.container .topSection {
   height: 40%vh;
   display: flex;
   flex-direction: column;
@@ -182,123 +188,137 @@ header nav a {
   border: 1px solid grey;
   background-color: beige;
 }
-.topSection .resume-img {
+.container .topSection .resume-img {
   width: 60%;
   height: 80%;
   margin-left: 4%;
 }
 @media (max-width: 500px) {
-  .topSection .resume-img {
+  .container .topSection .resume-img {
     margin-left: 20%;
   }
 }
-.topSection .resume-img .titles {
+.container .topSection .resume-img .titles {
   margin-left: 5%;
 }
-.topSection h1 {
+.container .topSection h1 {
   font-size: 5rem;
   margin: 2% 0% 1% 2%;
 }
 @media (max-width: 500px) {
-  .topSection h1 {
+  .container .topSection h1 {
     text-align: center;
   }
 }
-.topSection h2 {
+.container .topSection h2 {
   font-size: 3rem;
   margin-left: 30%;
 }
 @media (max-width: 500px) {
-  .topSection h2 {
+  .container .topSection h2 {
     text-align: center;
     margin: 0;
   }
 }
-.topSection h3 {
+.container .topSection h3 {
   font-size: 1.7rem;
   margin-left: 10%;
 }
 @media (max-width: 500px) {
-  .topSection h3 {
+  .container .topSection h3 {
     display: none;
   }
 }
-.topSection h4 {
+.container .topSection h4 {
   font-size: 1.6rem;
   margin-left: 28%;
   margin-top: 3%;
   color: blue;
 }
-/****middle- section********************************************************/
-.midSection {
+.container .midSection {
   display: flex;
 }
 @media (max-width: 500px) {
-  .midSection {
+  .container .midSection {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.midSection h2 {
+.container .midSection h2 {
   font-size: 1.5rem;
   margin-left: 6%;
   margin-bottom: 1.5%;
   margin-top: 2%;
   font-family: 'Noto Serif', serif;
 }
-.midSection .para {
+.container .midSection .para {
   border: 1px solid black;
   width: 75%;
   height: 30%;
   margin: 1%;
 }
-.midSection p {
+.container .midSection p {
   font-size: 1.3rem;
   margin-left: 1%;
   padding: 3%;
 }
-/*****bottom-section*******************************************************/
-.bottomSection {
+.container .bottomSection {
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 500px) {
-  .bottomSection {
+  .container .bottomSection {
     display: flex;
   }
 }
-.bottomSection h1 {
+.container .bottomSection h1 {
   font-size: 2rem;
   margin-left: 15%;
   margin-bottom: 2%;
 }
-.bottomSection .myTable {
+.container .bottomSection .myTable {
   width: 70%;
   margin-left: 15%;
 }
-.bottomSection .myTable th {
+.container .bottomSection .myTable th {
   border: 1px solid black;
   padding: 1.5%;
   font-size: 1.2rem;
 }
 @media (max-width: 500px) {
-  .bottomSection .myTable th {
+  .container .bottomSection .myTable th {
     font-size: 1.1rem;
     font-weight: bold;
   }
 }
-.bottomSection .myTable td {
+.container .bottomSection .myTable td {
   font-size: 1.2rem;
   margin-left: 25%;
   border: 1px solid black;
   padding: 1%;
 }
-/*****footer**************************************************************/
-footer {
+.container .contact {
+  border: 2px solid black;
+  width: 30%;
+  margin-left: 35%;
+  text-align: left;
+  padding-bottom: 2%;
+  background: aliceblue;
+}
+.container .contact h2 {
+  font-size: 20px;
+  font-family: 'Noto Serif', serif;
+  margin: 2% 0 1% 30%;
+}
+.container .contact p {
+  font-size: 1.2rem;
+  margin-left: 3%;
+}
+.container footer {
   font-size: 1rem;
   text-align: center;
 }
-footer h6 {
+.container footer h6 {
   margin-bottom: 0.5%;
 }

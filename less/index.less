@@ -148,219 +148,252 @@ table {
 	border: 1px solid grey;
 }
 
-//Google font import
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+// code starts here
 
-//    VARIABLES
-@paraH2: 'Noto Serif', serif;
+.container {
 
-@main-color: blue;
-@bgColor: beige;
+	//Google font import
+	@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
-//media
-@mobile: ~"(max-width: 500px)";
+	//    VARIABLES
+	@paraH2: 'Noto Serif',
+	serif;
 
-//    MIXINS
-.navAlign() {
-	display: flex;
-	justify-content: flex-end;
-	margin-right: 6%;
-	margin-top: 1%;
-	margin-bottom: 3%;
-}
+	@main-color: blue;
+	@bgColor: beige;
 
-.sectionProps() {
-	height: 40%vh;
-	display: flex;
-	flex-direction: column;
-	margin: 1.5%;
-	border: 1px solid grey;
-	background-color: @bgColor;
-}
+	//media
+	@mobile: ~"(max-width: 500px)";
 
-
-
-body {
-	font-family: 'Montserrat', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-	font-family: 'Inconsolata', monospace;
-}
-
-/****section loyout*************************************************************/
-
-section {
-	padding: 4% 0;
-}
-
-/****navigation********************************************************/
-
-header {
-	nav {
-		.navAlign();
-
-		@media @mobile {
-			display: flex;
-			justify-content: space-evenly;
-			margin-top: 3%;
-		}
-
-
-		a {
-			font-size: 20px;
-			text-decoration: none;
-			margin-right: 2%;
-		}
+	//    MIXINS
+	.navAlign() {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 6%;
+		margin-top: 1%;
+		margin-bottom: 3%;
 	}
 
-}
-
-/***top-section********************************************************/
-
-.topSection {
-
-	.sectionProps();
-
-	.resume-img {
-		width: 60%;
-		height: 80%;
-		margin-left: 4%;
-
-		@media @mobile {
-			margin-left: 20%;
-		}
-
-
-		.titles {
-			margin-left: 5%;
-
-		}
-	}
-
-	h1 {
-		font-size: 5rem;
-		margin: 2% 0% 1% 2%;
-
-		@media @mobile {
-			text-align: center;
-		}
-	}
-
-	h2 {
-		font-size: 3rem;
-		margin-left: 30%;
-
-		@media @mobile {
-			text-align: center;
-			margin: 0;
-		}
-	}
-
-	h3 {
-		font-size: 1.7rem;
-
-		margin-left: 10%;
-
-		@media @mobile {
-			display: none;
-		}
-	}
-
-	h4 {
-		font-size: 1.6rem;
-		margin-left: 28%;
-		margin-top: 3%;
-		color: @main-color;
-	}
-
-}
-
-/****middle- section********************************************************/
-
-.midSection {
-	display: flex;
-
-	@media @mobile {
+	.sectionProps() {
+		height: 40%vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		margin: 1.5%;
+		border: 1px solid grey;
+		background-color: @bgColor;
 	}
 
-	h2 {
-		font-size: 1.5rem;
-		margin-left: 6%;
-		margin-bottom: 1.5%;
-		margin-top: 2%;
-		font-family: @paraH2;
+
+
+	body {
+		font-family: 'Montserrat', sans-serif;
 	}
 
-	.para {
-		border: 1px solid black;
-		width: 75%;
-		height: 30%;
-		margin: 1%;
+	h1,
+	h2,
+	h3 {
+		font-family: 'Inconsolata', monospace;
 	}
 
-	p {
-		font-size: 1.3rem;
-		margin-left: 1%;
-		padding: 3%;
-	}
-}
+	/****section loyout*************************************************************/
 
-/*****bottom-section*******************************************************/
-
-.bottomSection {
-	display: flex;
-	flex-direction: column;
-
-	@media @mobile {
-		display: flex;
+	section {
+		padding: 4% 0;
 	}
 
-	h1 {
-		font-size: 2rem;
-		margin-left: 15%;
-		margin-bottom: 2%;
+	/****navigation********************************************************/
 
-
-	}
-
-	.myTable {
-		width: 70%;
-		margin-left: 15%;
-
-		th {
-			border: 1px solid black;
-			padding: 1.5%;
-			font-size: 1.2rem;
+	header {
+		nav {
+			.navAlign();
 
 			@media @mobile {
-				font-size: 1.1rem;
-				font-weight: bold;
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 3%;
+			}
+
+
+			a {
+				font-size: 20px;
+				text-decoration: none;
+				margin-right: 2%;
 			}
 		}
 
-		td {
-			font-size: 1.2rem;
-			margin-left: 25%;
-			border: 1px solid black;
-			padding: 1%;
+	}
+
+	/***top-section********************************************************/
+
+	.topSection {
+
+		.sectionProps();
+
+		.resume-img {
+			width: 60%;
+			height: 80%;
+			margin-left: 4%;
+
+			@media @mobile {
+				margin-left: 20%;
+			}
+
+
+			.titles {
+				margin-left: 5%;
+
+			}
+		}
+
+		h1 {
+			font-size: 5rem;
+			margin: 2% 0% 1% 2%;
+
+			@media @mobile {
+				text-align: center;
+			}
+		}
+
+		h2 {
+			font-size: 3rem;
+			margin-left: 30%;
+
+			@media @mobile {
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		h3 {
+			font-size: 1.7rem;
+
+			margin-left: 10%;
+
+			@media @mobile {
+				display: none;
+			}
+		}
+
+		h4 {
+			font-size: 1.6rem;
+			margin-left: 28%;
+			margin-top: 3%;
+			color: @main-color;
 		}
 
 	}
-}
 
-/*****footer**************************************************************/
+	/****middle- section********************************************************/
 
-footer {
-	font-size: 1rem;
-	text-align: center;
+	.midSection {
+		display: flex;
 
-	h6 {
-		margin-bottom: 0.5%;
+		@media @mobile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-left: 6%;
+			margin-bottom: 1.5%;
+			margin-top: 2%;
+			font-family: @paraH2;
+		}
+
+		.para {
+			border: 1px solid black;
+			width: 75%;
+			height: 30%;
+			margin: 1%;
+		}
+
+		p {
+			font-size: 1.3rem;
+			margin-left: 1%;
+			padding: 3%;
+		}
 	}
+
+	/*****bottom-section*******************************************************/
+
+	.bottomSection {
+		display: flex;
+		flex-direction: column;
+
+		@media @mobile {
+			display: flex;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-left: 15%;
+			margin-bottom: 2%;
+
+
+		}
+
+		.myTable {
+			width: 70%;
+			margin-left: 15%;
+
+			th {
+				border: 1px solid black;
+				padding: 1.5%;
+				font-size: 1.2rem;
+
+				@media @mobile {
+					font-size: 1.1rem;
+					font-weight: bold;
+				}
+			}
+
+			td {
+				font-size: 1.2rem;
+				margin-left: 25%;
+				border: 1px solid black;
+				padding: 1%;
+			}
+
+		}
+	}
+
+	/*******contact***********************************************************/
+	.contact {
+		border: 2px solid black;
+		width: 30%;
+		margin-left: 35%;
+		text-align: left;
+		padding-bottom: 2%;
+		background: aliceblue;
+
+		h2 {
+			font-size: 20px;
+			font-family: @paraH2;
+			margin: 2% 0 1% 30%;
+		}
+
+		p {
+			font-size: 1.2rem;
+			margin-left: 3%;
+		}
+	}
+
+
+
+
+
+
+
+	/*****footer**************************************************************/
+	footer {
+		font-size: 1rem;
+		text-align: center;
+
+		h6 {
+			margin-bottom: 0.5%;
+		}
+	}
+
 }
